@@ -1,8 +1,8 @@
 ### <p align=right>[`→` Modrinth](https://modrinth.com/mod/fabric-api)</p>
 
-# Example Mod
+# It Follows!
 
-This is an example mod.
+This useful mod sticks your cursor to the `GUI Scale` button when adjusting the GUI scaling.
 
 ## License
 

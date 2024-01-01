@@ -1,0 +1,26 @@
+package net.krlite.it_follows.mixin;
+
+import net.krlite.it_follows.ItFollows;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.screen.option.GameOptionsScreen;
+import net.minecraft.client.gui.screen.option.VideoOptionsScreen;
+import net.minecraft.client.gui.widget.CyclingButtonWidget;
+import net.minecraft.client.gui.widget.OptionListWidget;
+import net.minecraft.client.option.GameOptions;
+import net.minecraft.text.Text;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Mixin(VideoOptionsScreen.class)
+public class VideoOptionsScreenMixin extends GameOptionsScreen {
+    public VideoOptionsScreenMixin(Screen parent, GameOptions gameOptions, Text title) {
+        super(parent, gameOptions, title);
+    }
+
+    @Inject(method = "init", at = @At("TAIL"))
+    private void init(CallbackInfo ci) {
+        ItFollows.guiScaleWidget((CyclingButtonWidget<?>) (((OptionListWidget) children().get(0)).children().get(6)).children().get(0));
+    }
+}
