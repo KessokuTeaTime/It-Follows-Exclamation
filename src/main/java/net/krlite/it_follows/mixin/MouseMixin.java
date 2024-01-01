@@ -22,8 +22,9 @@ public abstract class MouseMixin {
 
     @Inject(method = "onResolutionChanged", at = @At("RETURN"))
     private void onResolutionChanged(CallbackInfo ci) {
-        Vector2i pos = ItFollows.buttonPos();
+        Vector2i pos = ItFollows.widgetPos();
         if (pos != null) {
+            System.out.println(pos);
             x = pos.x();
             y = pos.y();
             InputUtil.setCursorParameters(client.getWindow().getHandle(), 212993, x, y);

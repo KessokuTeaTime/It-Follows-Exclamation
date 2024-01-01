@@ -1,15 +1,15 @@
 package net.krlite.it_follows;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.Event;
-import net.fabricmc.fabric.api.event.EventFactory;
-import net.minecraft.client.gui.widget.CyclingButtonWidget;
 import net.minecraft.client.gui.widget.PressableWidget;
-import net.minecraft.util.ActionResult;
 import org.jetbrains.annotations.Nullable;
+import org.joml.Vector2d;
 import org.joml.Vector2i;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Objects;
+import java.util.function.Supplier;
 
 public class ItFollows implements ModInitializer {
 	public static final String NAME = "It Follows!", ID = "it-follows";
@@ -18,7 +18,7 @@ public class ItFollows implements ModInitializer {
 	@Nullable
 	private static PressableWidget GUI_SCALE_WIDGET = null;
 	@Nullable
-	private static Vector2i BUTTON_POS = null;
+	private static Supplier<Vector2i> WIDGET_POS_SUPPLIER = null;
 
 	@Override
 	public void onInitialize() {
@@ -28,13 +28,15 @@ public class ItFollows implements ModInitializer {
 		GUI_SCALE_WIDGET = widget;
 	}
 
-	public static @Nullable Vector2i buttonPos() {
-		return BUTTON_POS;
+	public static @Nullable Vector2i widgetPos() {
+		if (WIDGET_POS_SUPPLIER != null) {
+			return WIDGET_POS_SUPPLIER.get();
+		} else return null;
 	}
 
-	public static void buttonPos(PressableWidget widget, int x, int y) {
+	public static void widgetPos(PressableWidget widget, Supplier<Vector2i> supplier) {
 		if (widget.equals(GUI_SCALE_WIDGET)) {
-			BUTTON_POS = new Vector2i(x, y);
+			WIDGET_POS_SUPPLIER = supplier;
 		}
 	}
 }

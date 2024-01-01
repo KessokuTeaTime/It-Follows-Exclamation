@@ -4,6 +4,7 @@ import net.krlite.it_follows.ItFollows;
 import net.minecraft.client.gui.widget.CyclingButtonWidget;
 import net.minecraft.client.gui.widget.PressableWidget;
 import net.minecraft.text.Text;
+import org.joml.Vector2i;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,6 +18,6 @@ public abstract class CyclingButtonWidgetMixin extends PressableWidget {
 
     @Inject(method = "cycle", at = @At("HEAD"))
     private void cycleHead(int amount, CallbackInfo ci) {
-        ItFollows.buttonPos(this, getX(), getY());
+        ItFollows.widgetPos(this, () -> new Vector2i(getX() + getWidth() / 2, getY() + getHeight() / 2));
     }
 }
