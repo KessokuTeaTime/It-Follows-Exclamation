@@ -12,7 +12,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(VideoOptionsScreen.class)
 public class VideoOptionsScreenMixin extends GameOptionsScreen {
@@ -22,6 +21,8 @@ public class VideoOptionsScreenMixin extends GameOptionsScreen {
 
     @Inject(method = "init", at = @At("TAIL"))
     private void init(CallbackInfo ci) {
-        ItFollows.fetchPosFromWidget((CyclingButtonWidget<?>) (((OptionListWidget) children().get(0)).children().get(6)).children().get(0));
+        var widget = (CyclingButtonWidget<?>) (((OptionListWidget) children().get(0)).children().get(6)).children().get(0);
+        ItFollows.foundWidget(widget);
+        ItFollows.fetchXFromWidget(widget);
     }
 }

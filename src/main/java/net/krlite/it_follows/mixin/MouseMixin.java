@@ -26,17 +26,9 @@ public abstract class MouseMixin {
     private void onResolutionChanged(CallbackInfo ci) {
         Optional<Vector2d> pos = ItFollows.widgetPosUnscaled();
         if (pos.isPresent()) {
-            System.out.println(pos.get().x() + ", " + pos.get().y());
             x = pos.get().x();
             y = pos.get().y();
             InputUtil.setCursorParameters(client.getWindow().getHandle(), 212993, x, y);
         }
-    }
-
-    @Inject(method = "onCursorPos", at = @At("TAIL"))
-    private void test(long window, double x, double y, CallbackInfo ci) {
-        ItFollows.allowFollowing();
-        Optional<Vector2d> pos = ItFollows.widgetPosUnscaled();
-        pos.ifPresent(vector2d -> System.out.println("Mouse: " + x + ", " + y + ", Widget: " + vector2d.x() + ", " + vector2d.y()));
     }
 }
