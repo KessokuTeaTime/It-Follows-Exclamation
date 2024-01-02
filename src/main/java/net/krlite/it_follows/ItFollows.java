@@ -25,12 +25,12 @@ public class ItFollows implements ModInitializer {
 	public void onInitialize() {
 	}
 
-	private static boolean checkWidget(ClickableWidget widget) {
-		return widget.equals(ItFollows.widget);
+	private static boolean widgetCheckFailed(ClickableWidget widget) {
+		return !widget.equals(ItFollows.widget);
 	}
 
 	public static void allowFollowing(ClickableWidget widget) {
-		if (!checkWidget(widget)) return;
+		if (widgetCheckFailed(widget)) return;
 
 		allowFollowing = true;
 	}
@@ -38,11 +38,16 @@ public class ItFollows implements ModInitializer {
 	public static Optional<Vector2d> widgetPosUnscaled() {
 		if (allowFollowing) {
 			allowFollowing = false;
+
 			Window window = MinecraftClient.getInstance().getWindow();
-			return Optional.of(new Vector2d(
+			Vector2d pos = new Vector2d(
 					window.getWidth() * (double) widgetPos.x() / window.getScaledWidth(),
 					window.getHeight() * (double) widgetPos.y() / window.getScaledHeight()
-			));
+			);
+
+			return Optional.ofNullable(
+					pos.x() >= 0 && pos.x() <= window.getWidth() && pos.y() >= 0 && pos.y() <= window.getHeight() ? pos : null
+			);
 		} else return Optional.empty();
 	}
 
@@ -51,14 +56,14 @@ public class ItFollows implements ModInitializer {
 	}
 
 	public static void fetchXFromWidget(ClickableWidget widget) {
-		if (!checkWidget(widget)) return;
+		if (widgetCheckFailed(widget)) return;
 
 		ClickableWidgetAccessor accessor = ((ClickableWidgetAccessor) widget);
 		widgetPos.set(accessor.getX() + accessor.getWidth() / 2, widgetPos.y());
 	}
 
 	public static void fetchYFromWidget(ClickableWidget widget) {
-		if (!checkWidget(widget)) return;
+		if (widgetCheckFailed(widget)) return;
 
 		ClickableWidgetAccessor accessor = ((ClickableWidgetAccessor) widget);
 		widgetPos.set(widgetPos.x(), accessor.getY() + accessor.getHeight() / 2);
