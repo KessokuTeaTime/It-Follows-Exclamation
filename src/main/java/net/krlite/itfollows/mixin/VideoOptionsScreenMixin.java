@@ -1,6 +1,6 @@
-package net.krlite.it_follows.mixin;
+package net.krlite.itfollows.mixin;
 
-import net.krlite.it_follows.ItFollows;
+import net.krlite.itfollows.ItFollows;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.client.gui.screen.option.VideoOptionsScreen;

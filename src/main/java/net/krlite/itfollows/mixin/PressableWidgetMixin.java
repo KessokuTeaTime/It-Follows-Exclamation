@@ -1,6 +1,6 @@
-package net.krlite.it_follows.mixin;
+package net.krlite.itfollows.mixin;
 
-import net.krlite.it_follows.ItFollows;
+import net.krlite.itfollows.ItFollows;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.client.gui.widget.PressableWidget;

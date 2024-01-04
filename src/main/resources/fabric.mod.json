@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "id": "it-follows",
+  "id": "itfollows",
   "version": "${version}",
 
   "name": "It Follows!",
-  "description": "Let the Cursor Follow the 'GUI Scale' Button So They Won't Separate!",
+  "description": "Let the cursor follow the 'GUI Scale' button so they won't separate!",
   "authors": [
     "KrLite"
   ],
   "contact": {
     "homepage": "https://github.com/KrLite",
-    "sources": "https://github.com/KrLite/It-Follows-Exclamation"
+    "sources": "https://github.com/KrLite/Mod.It-Follows-Exclamation"
   },
 
   "license": "GPL-3.0",
-  "icon": "assets/it_follows/icon.png",
+  "icon": "assets/itfollows/icon.png",
 
   "environment": "*",
   "entrypoints": {

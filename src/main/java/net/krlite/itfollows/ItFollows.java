@@ -1,7 +1,7 @@
-package net.krlite.it_follows;
+package net.krlite.itfollows;
 
 import net.fabricmc.api.ModInitializer;
-import net.krlite.it_follows.mixin.ClickableWidgetAccessor;
+import net.krlite.itfollows.mixin.ClickableWidgetAccessor;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.client.util.Window;
@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Optional;
 
 public class ItFollows implements ModInitializer {
-	public static final String NAME = "It Follows!", ID = "it-follows";
+	public static final String NAME = "It Follows!", ID = "itfollows";
 	public static final Logger LOGGER = LoggerFactory.getLogger(ID);
 
 	private static boolean allowFollowing = false;

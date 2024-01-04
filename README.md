@@ -6,7 +6,7 @@ This useful mod sticks your cursor to the `GUI Scale` button when adjusting the 
 
 Just like this:
 
-![Demonstration](https://github.com/KrLite/It-Follows-Exclamation/blob/artwork/content/demonstration.gif)
+![Demonstration](https://github.com/KrLite/Mod.It-Follows-Exclamation/blob/artwork/content/demonstration.gif)
 
 ## License
 

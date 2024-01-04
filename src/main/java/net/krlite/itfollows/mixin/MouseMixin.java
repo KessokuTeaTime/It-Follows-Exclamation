@@ -1,6 +1,6 @@
-package net.krlite.it_follows.mixin;
+package net.krlite.itfollows.mixin;
 
-import net.krlite.it_follows.ItFollows;
+import net.krlite.itfollows.ItFollows;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;
 import net.minecraft.client.util.InputUtil;
