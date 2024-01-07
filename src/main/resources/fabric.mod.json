@@ -9,8 +9,9 @@
     "KrLite"
   ],
   "contact": {
-    "homepage": "https://github.com/KrLite",
-    "sources": "https://github.com/KrLite/Mod.It-Follows-Exclamation"
+    "homepage": "https://modrinth.com/mod/it-follows!",
+    "sources": "https://github.com/KrLite/Mod.It-Follows-Exclamation",
+    "issues": "https://github.com/KrLite/Mod.It-Follows-Exclamation/issues"
   },
 
   "license": "GPL-3.0",
@@ -19,7 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.krlite.it_follows.ItFollows"
+      "net.krlite.itfollows.ItFollows"
     ]
   },
   "mixins": [
