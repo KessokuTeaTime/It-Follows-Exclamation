@@ -30,6 +30,10 @@ java {
 	withSourcesJar()
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/itfollows.accesswidener")
+}
+
 tasks {
 	processResources {
 		inputs.property("version", libs.versions.mod.get())

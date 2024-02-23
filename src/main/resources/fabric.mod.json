@@ -24,9 +24,9 @@
     ]
   },
   "mixins": [
-    "it_follows.mixins.json"
+    "itfollows.mixins.json"
   ],
-  "accessWidener": "it_follows.accesswidener",
+  "accessWidener": "itfollows.accesswidener",
 
   "depends": {
     "fabricloader": "*",
