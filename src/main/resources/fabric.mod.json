@@ -17,9 +17,9 @@
   "license": "GPL-3.0",
   "icon": "assets/itfollows/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
+    "client": [
       "net.krlite.itfollows.ItFollows"
     ]
   },

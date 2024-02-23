@@ -1,5 +1,6 @@
 package net.krlite.itfollows;
 
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.krlite.itfollows.mixin.ClickableWidgetAccessor;
 import net.minecraft.client.MinecraftClient;
@@ -13,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Optional;
 
-public class ItFollows implements ModInitializer {
+public class ItFollows implements ClientModInitializer {
 	public static final String NAME = "It Follows!", ID = "itfollows";
 	public static final Logger LOGGER = LoggerFactory.getLogger(ID);
 
@@ -22,7 +23,7 @@ public class ItFollows implements ModInitializer {
 	private static Vector2i widgetPos = new Vector2i();
 
 	@Override
-	public void onInitialize() {
+	public void onInitializeClient() {
 	}
 
 	private static boolean widgetCheckFailed(ClickableWidget widget) {
