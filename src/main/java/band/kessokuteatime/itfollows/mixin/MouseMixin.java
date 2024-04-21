@@ -1,6 +1,6 @@
-package net.krlite.itfollows.mixin;
+package band.kessokuteatime.itfollows.mixin;
 
-import net.krlite.itfollows.ItFollows;
+import band.kessokuteatime.itfollows.ItFollows;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;
 import net.minecraft.client.util.InputUtil;

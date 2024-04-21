@@ -1,4 +1,4 @@
-### <p align=right>[`→` Modrinth](https://modrinth.com/mod/it-follows!)</p>
+### <p align=right>[`→` CurseForge](https://www.curseforge.com/minecraft/mc-mods/it-follows-exclamation)&ensp;[`→` Modrinth](https://modrinth.com/mod/it-follows!)</p>
 
 # It Follows!
 
@@ -6,7 +6,7 @@ This useful mod sticks your cursor to the `GUI Scale` button when adjusting the 
 
 Just like this:
 
-![Demonstration](https://github.com/KrLite/Mod.It-Follows-Exclamation/blob/artwork/content/demonstration.gif)
+![demonstration](https://github.com/KessokuTeaTime/It-Follows-Exclamation/blob/artwork/content/demonstration.gif)
 
 ## License
 

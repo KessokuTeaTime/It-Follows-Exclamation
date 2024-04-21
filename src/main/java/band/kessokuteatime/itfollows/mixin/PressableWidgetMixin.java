@@ -1,6 +1,6 @@
-package net.krlite.itfollows.mixin;
+package band.kessokuteatime.itfollows.mixin;
 
-import net.krlite.itfollows.ItFollows;
+import band.kessokuteatime.itfollows.ItFollows;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.client.gui.widget.PressableWidget;

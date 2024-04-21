@@ -1,6 +1,6 @@
-package net.krlite.itfollows.mixin;
+package band.kessokuteatime.itfollows.mixin;
 
-import net.krlite.itfollows.ItFollows;
+import band.kessokuteatime.itfollows.ItFollows;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.client.gui.screen.option.VideoOptionsScreen;

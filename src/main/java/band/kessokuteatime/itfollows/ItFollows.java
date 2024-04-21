@@ -1,8 +1,7 @@
-package net.krlite.itfollows;
+package band.kessokuteatime.itfollows;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.api.ModInitializer;
-import net.krlite.itfollows.mixin.ClickableWidgetAccessor;
+import band.kessokuteatime.itfollows.mixin.ClickableWidgetAccessor;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.client.util.Window;

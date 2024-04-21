@@ -1,4 +1,4 @@
-package net.krlite.itfollows.mixin;
+package band.kessokuteatime.itfollows.mixin;
 
 import net.minecraft.client.gui.widget.ClickableWidget;
 import org.spongepowered.asm.mixin.Mixin;

@@ -3,15 +3,16 @@
   "id": "itfollows",
   "version": "${version}",
 
-  "name": "It Follows!",
+  "name": "${display.name}",
   "description": "Let the cursor follow the 'GUI Scale' button so they won't separate!",
   "authors": [
+    "Kessoku Tea Time",
     "KrLite"
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/it-follows!",
-    "sources": "https://github.com/KrLite/Mod.It-Follows-Exclamation",
-    "issues": "https://github.com/KrLite/Mod.It-Follows-Exclamation/issues"
+    "sources": "https://github.com/KessokuTeaTime/It-Follows-Exclamation",
+    "issues": "https://github.com/KessokuTeaTime/It-Follows-Exclamation/issues"
   },
 
   "license": "GPL-3.0",
@@ -20,7 +21,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.krlite.itfollows.ItFollows"
+      "band.kessokuteatime.itfollows.ItFollows"
     ]
   },
   "mixins": [
