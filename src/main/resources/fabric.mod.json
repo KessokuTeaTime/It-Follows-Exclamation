@@ -32,7 +32,7 @@
   "depends": {
     "fabricloader": "*",
     "fabric-api": "*",
-    "minecraft": "1.21.x"
+    "minecraft": ["~1.20.5", "~1.20.6"]
   },
   "suggests": {
   }

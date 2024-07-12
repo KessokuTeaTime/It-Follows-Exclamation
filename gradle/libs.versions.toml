@@ -4,10 +4,10 @@ archives-name = "itfollows"
 mod = "1.1.0"
 loader = "fabric"
 
-minecraft = "1.21"
-yarn = "1.21+build.9"
+minecraft = "1.20.5"
+yarn = "1.20.5+build.1"
 fabric-loader = "0.16.0"
-fabric-api = "0.100.6+1.21"
+fabric-api = "0.97.8+1.20.5"
 fabric-loom = "1.6-SNAPSHOT"
 modpublisher = "2.1.0"
 
@@ -18,7 +18,7 @@ id-curseforge = "998444"
 # display
 display-name = "It Follows!"
 display-loader = "Fabric"
-display-version = "1.21.x"
+display-version = "1.20.5~1.20.6"
 
 [libraries]
 minecraft = { group = "com.mojang", name = "minecraft", version.ref = "minecraft" }
