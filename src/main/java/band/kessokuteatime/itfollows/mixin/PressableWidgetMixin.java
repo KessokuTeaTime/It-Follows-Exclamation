@@ -16,7 +16,7 @@ public abstract class PressableWidgetMixin extends ClickableWidget {
         super(x, y, width, height, message);
     }
 
-    @Inject(method = "renderButton", at = @At("RETURN"))
+    @Inject(method = "renderWidget", at = @At("RETURN"))
     private void updatePos(DrawContext par1, int par2, int par3, float par4, CallbackInfo ci) {
         ItFollows.fetchYFromWidget(this);
     }

@@ -17,6 +17,6 @@ public abstract class CyclingButtonWidgetMixin extends PressableWidget {
 
     @Inject(method = "cycle", at = @At("HEAD"))
     private void cycle(int amount, CallbackInfo ci) {
-        ItFollows.allowFollowing(this);
+        ItFollows.followingAllowed(this);
     }
 }

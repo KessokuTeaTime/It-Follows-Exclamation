@@ -4,6 +4,8 @@ import net.fabricmc.api.ClientModInitializer;
 import band.kessokuteatime.itfollows.mixin.ClickableWidgetAccessor;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.widget.ClickableWidget;
+import net.minecraft.client.gui.widget.OptionListWidget;
+import net.minecraft.client.gui.widget.Widget;
 import net.minecraft.client.util.Window;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector2d;
@@ -17,9 +19,9 @@ public class ItFollows implements ClientModInitializer {
 	public static final String NAME = "It Follows!", ID = "itfollows";
 	public static final Logger LOGGER = LoggerFactory.getLogger(ID);
 
-	private static boolean allowFollowing = false;
+	private static boolean followingAllowed = false;
 	private static @Nullable ClickableWidget widget;
-	private static Vector2i widgetPos = new Vector2i();
+	private static final Vector2i widgetPos = new Vector2i();
 
 	@Override
 	public void onInitializeClient() {
@@ -29,19 +31,21 @@ public class ItFollows implements ClientModInitializer {
 		return !widget.equals(ItFollows.widget);
 	}
 
-	public static void allowFollowing(ClickableWidget widget) {
+	public static void followingAllowed(ClickableWidget widget) {
 		if (widgetCheckFailed(widget)) return;
 
-		allowFollowing = true;
+		followingAllowed = true;
 	}
 
 	public static Optional<Vector2d> widgetPosUnscaled() {
-		if (allowFollowing) {
-			allowFollowing = false;
+		if (followingAllowed) {
+			followingAllowed = false;
+
+			int leftEdge = MinecraftClient.getInstance().getWindow().getScaledWidth() / 2 - 155;
 
 			Window window = MinecraftClient.getInstance().getWindow();
 			Vector2d pos = new Vector2d(
-					window.getWidth() * (double) widgetPos.x() / window.getScaledWidth(),
+					window.getWidth() * (double)  (leftEdge + widgetPos.x()) / window.getScaledWidth(),
 					window.getHeight() * (double) widgetPos.y() / window.getScaledHeight()
 			);
 

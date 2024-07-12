@@ -14,14 +14,16 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(VideoOptionsScreen.class)
-public class VideoOptionsScreenMixin extends GameOptionsScreen {
+public abstract class VideoOptionsScreenMixin extends GameOptionsScreen {
     public VideoOptionsScreenMixin(Screen parent, GameOptions gameOptions, Text title) {
         super(parent, gameOptions, title);
     }
 
-    @Inject(method = "init", at = @At("TAIL"))
+    @Inject(method = "addOptions", at = @At("RETURN"))
     private void init(CallbackInfo ci) {
-        var widget = (CyclingButtonWidget<?>) (((OptionListWidget) children().get(0)).children().get(6)).children().get(0);
+        assert body != null;
+
+        var widget = (CyclingButtonWidget<?>) body.children().get(6).children().getFirst();
         ItFollows.foundWidget(widget);
         ItFollows.fetchXFromWidget(widget);
     }
