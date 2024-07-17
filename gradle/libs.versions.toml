@@ -1,7 +1,7 @@
 [versions]
 maven-group = "band.kessokuteatime"
 archives-name = "itfollows"
-mod = "1.1.0"
+mod = "1.1.1"
 loader = "fabric"
 
 minecraft = "1.21"

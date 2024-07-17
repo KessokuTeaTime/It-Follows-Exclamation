@@ -3,7 +3,7 @@
   "id": "itfollows",
   "version": "${version}",
 
-  "name": "${display.name}",
+  "name": "${display.name.get()}",
   "description": "Let the cursor follow the 'GUI Scale' button so they won't separate!",
   "authors": [
     "Kessoku Tea Time",
